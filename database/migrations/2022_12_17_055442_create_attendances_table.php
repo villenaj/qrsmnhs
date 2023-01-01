@@ -16,12 +16,12 @@ return new class extends Migration
         Schema::dropIfExists('attendances');
         Schema::create('attendances', function (Blueprint $table) {
             $table->unsignedBigInteger('idattend')->primary(); // this is the auto-incrementing primary key
-            $table->date('date');
-            $table->dateTime('amin');
-            $table->dateTime('amout');
-            $table->dateTime('pmin');
-            $table->dateTime('pmout');
-            $table->string('preab');
+            $table->date('date')->nullable();
+            $table->dateTime('amin')->nullable();
+            $table->dateTime('amout')->nullable();
+            $table->dateTime('pmin')->nullable();
+            $table->dateTime('pmout')->nullable();
+            $table->string('preab')->nullable();
             $table->unsignedBigInteger('idemp');
             $table->foreign('idemp')
                 ->references('id')->on('employees')
