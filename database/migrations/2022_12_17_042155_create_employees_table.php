@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::dropIfExists('employees');
         Schema::create('employees', function (Blueprint $table) {
-            $table->unsignedBigInteger('idemp')->primary(); // this is the auto-incrementing primary key
+            $table->unsignedBigInteger('id')->primary(); // this is the auto-incrementing primary key
             $table->string('firstname');
             $table->string('middlename');
             $table->string('lastname');

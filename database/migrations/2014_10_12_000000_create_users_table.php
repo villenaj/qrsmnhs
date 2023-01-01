@@ -13,13 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('users');
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+            $table->string('username', 191)->primary();
+            $table->unsignedBigInteger('idemp');
+            $table->foreign('idemp')
+                ->references('id')->on('employees')
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
+            $table->string('email', 191);
+            $table->string('password', 191);
+            $table->string('role', 191);
             $table->timestamps();
         });
     }

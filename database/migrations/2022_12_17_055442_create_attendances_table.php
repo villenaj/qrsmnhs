@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('preab');
             $table->unsignedBigInteger('idemp');
             $table->foreign('idemp')
-                ->references('idemp')->on('employees')
+                ->references('id')->on('employees')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->timestamps();
