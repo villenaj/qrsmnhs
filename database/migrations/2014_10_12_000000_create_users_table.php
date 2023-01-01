@@ -15,15 +15,15 @@ return new class extends Migration
     {
         Schema::dropIfExists('users');
         Schema::create('users', function (Blueprint $table) {
-            $table->string('username', 191)->primary();
+            $table->string('username')->primary();
             $table->unsignedBigInteger('idemp');
             $table->foreign('idemp')
                 ->references('id')->on('employees')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->string('email', 191);
-            $table->string('password', 191);
-            $table->string('role', 191);
+            $table->string('email');
+            $table->string('password');
+            $table->string('role');
             $table->timestamps();
         });
     }
