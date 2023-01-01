@@ -14,6 +14,12 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
+        $this->app->bind(
+            \App\Models\attendance::class,
+            \App\Models\employee::class,
+            \App\Models\event::class,
+            \App\Models\User::class
+        );
     }
 
     /**
