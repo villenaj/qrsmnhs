@@ -84,7 +84,7 @@ class userController extends Controller
 		}
 
     	$newReg->username = $request->username;
-		$newReg->id = $employees->id;
+		$newReg->idemp = $employees->id;
     	$newReg->email = $request->email;
     	$newReg->password = hash::make($request->password);
 
