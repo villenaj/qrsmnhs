@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('localhost','root','','qrattendance');
+$con = mysqli_connect('us-cdbr-east-06.cleardb.net','b3f163b9ed5cc0','e937938d','heroku_8f911c5e407f80b');
 if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
