@@ -53,8 +53,7 @@
                         <div class="mb-3">
                           <div class="custom-control custom-checkbox small">
                             <div class="form-check">
-                              <input class="form-check-input custom-control-input" type="checkbox" id="formCheck-1">
-                              <label class="form-check-label custom-control-label" for="formCheck-1">Remember Me</label>
+                              
                             </div>
                           </div>
                         </div>
