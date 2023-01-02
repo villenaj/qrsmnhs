@@ -25,9 +25,14 @@ class userController extends Controller
 			return redirect('login');
 		} else {
 			if ($user && $exists) {
-				$request->session()->put('email', $email);
-				$request->session()->put('enterpassword', 'Enter your password.');
-				return redirect('login');
+                if ($user->role == "Admin") {
+                    $request->session()->put('email', $email);
+                    $request->session()->put('enterpassword', 'Enter your password.');
+                    return redirect('login');
+                } else {
+                    $request->session()->put('error', 'You are not administrator. You do not have privilege to access the panel.');
+                    return redirect('login');
+                }
 			} else {
 				$request->session()->put('signup', $email);
 				$request->session()->put('needsignup', 'You need to register your email first.');
