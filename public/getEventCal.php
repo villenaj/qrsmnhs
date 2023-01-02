@@ -7,9 +7,11 @@ function getEventCalendar() {
   $events = event::select('start')->get();
 
   // get the number of days in the current month and the name of the current month
-  $days_in_month = cal_days_in_month(CAL_GREGORIAN, date('m'), date('Y'));  // number of days in the current month
-  $calendar_info = cal_info(0);  // calendar information
-  $month_name = $calendar_info['months'][date('m')];  // name of the current month
+  $month = date('m');
+  $year = date('Y');
+  $days_in_month = date('t', mktime(0, 0, 0, $month, 1, $year));  // number of days in the current month
+  // $calendar_info = cal_info(0);  // calendar information
+  $month_name = date('F');  // name of the current month
 
   // start generating the calendar HTML
   $calendar_html = "<table class='table table-bordered'>";
