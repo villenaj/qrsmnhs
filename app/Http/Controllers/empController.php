@@ -172,7 +172,7 @@ class empController extends Controller
 		$trimmedurl = substr($imageUrl, 12);
 		$publicId = substr($trimmedurl, 0, 20);
 		\Cloudinary::destroy($publicId);
-		unlink("C:Users\Joel\LaravelProjects\qrsmnhs\public\uploads\\" . $employees->image);
+		unlink(public_path('uploads/' . $employees->image));
 		session()->flash('message', "Successfully removed " . $employees->firstname . " " . $employees->lastname);
 		$employees->delete();
   
