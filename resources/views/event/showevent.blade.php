@@ -6,7 +6,7 @@
                 <option value="" disabled selected>Select an event</option>
                 @foreach ($events as $event)
                     @if ($event->start > now())
-                        <option value="{{ $event->idt }}">{{ $event->title }}</option>
+                        <option value="{{ $event->id }}">{{ $event->title }}</option>
                     @endif
                 @endforeach
             </select>
