@@ -52,7 +52,7 @@
           <table class="table my-0" id="printDTR">
             <thead>
               <tr>
-                {{--<th>Day</th>--}}
+                <th>Date</th>
                 <th>Morning In</th>
                 <th>Morning Out</th>
                 <th>Afternoon In</th>
@@ -104,7 +104,7 @@
                 var pmout = new Date(response[i].pmout).toLocaleTimeString('en-US', {hour: '2-digit', minute:'2-digit'});
                 if (id == response[i].idemp) {
                   // create the table row with the formatted date and time strings
-                  var row = '<tr><td>' + amin + '</td><td>' + amout + '</td><td>' + pmin + '</td><td>' + pmout + '</td></tr>';
+                  var row = '<tr><td>' + response[i].date + '</td><td>' + amin + '</td><td>' + amout + '</td><td>' + pmin + '</td><td>' + pmout + '</td></tr>';
                   table.append(row);
                 }
               }
