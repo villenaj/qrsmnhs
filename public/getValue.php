@@ -7,7 +7,7 @@ if (!$con) {
 }
 
 mysqli_select_db($con,"qrattendance");
-$sql = "SELECT * FROM events WHERE id = '".$q."'";
+$sql = "SELECT * FROM events WHERE idevent = '".$q."'";
 $result = mysqli_query($con,$sql);
 
 echo '<table class="table table-bordered" id="event-table">';
