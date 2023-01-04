@@ -6,7 +6,7 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-$sql = "SELECT * FROM events WHERE idevent = '".$q."'";
+$sql = "SELECT * FROM events WHERE id = '".$q."'";
 $result = mysqli_query($con,$sql);
 
 echo '<table class="table table-bordered" id="event-table">';
