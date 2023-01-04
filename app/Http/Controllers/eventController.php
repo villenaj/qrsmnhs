@@ -28,7 +28,7 @@ class eventController extends Controller
 	    $newEvent->start = date('Y-m-d H:i:s', strtotime($request->start . ' ' . $request->starttime));
 	    $newEvent->end = date('Y-m-d H:i:s', strtotime($request->end . ' ' . $request->endtime));
 	    $newEvent->location = $request->location;
-        $newEvent->id = $request->session()->get('user')['id'];
+        $newEvent->idemp = $request->session()->get('user')['id'];
 	    
 	    $newEvent->save();
 
