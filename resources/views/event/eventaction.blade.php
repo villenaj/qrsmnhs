@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body text-start">
-        {!! Form::model($events, [ 'method' => 'patch','route' => ['event.update', $event->id] ]) !!}
+        {!! Form::model($events, [ 'method' => 'patch','route' => ['event.update', $event->idevent] ]) !!}
           <div class="mb-3">
               {!! Form::label('title', 'Title') !!}
               {!! Form::text('title', $event->title, ['class' => 'form-control']) !!}
@@ -61,7 +61,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-            {!! Form::model($events, [ 'method' => 'delete','route' => ['event.delete', $event->id] ]) !!}
+            {!! Form::model($events, [ 'method' => 'delete','route' => ['event.delete', $event->idevent] ]) !!}
                 <p class="text-center">Are you sure you want to remove</p>
                 <h5 class="text-center">{{$event->title}}?</h5>
         </div>
