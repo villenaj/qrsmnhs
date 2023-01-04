@@ -6,7 +6,6 @@ if (!$con) {
   die('Could not connect: ' . mysqli_error($con));
 }
 
-mysqli_select_db($con,"heroku_8f911c5e407f80b");
 $sql = "SELECT * FROM events WHERE idevent = '".$q."'";
 $result = mysqli_query($con,$sql);
 
