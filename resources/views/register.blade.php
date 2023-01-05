@@ -39,10 +39,9 @@
                   </div>
                   <button class="btn btn-primary d-block btn-user w-100" type="submit">Register Account</button>
                   <hr>
-                  <a class="btn btn-primary d-block btn-google btn-user w-100 mb-2" role="button" href="/login">
-                    <i class="fab fa-google"></i>&nbsp; Forgot Password? </a>
+                  
                   <a class="btn btn-primary d-block btn-facebook btn-user w-100" role="button" href="/login">
-                    <i class="fab fa-facebook-f"></i>&nbsp; Already have an account? Login! </a>
+                    &nbsp; Already have an account? Login! </a>
                   <hr>
                 </form>
                 <div class="text-center">
